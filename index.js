@@ -9,11 +9,11 @@ document.querySelector('.dipform').addEventListener('submit', (e) => {
 	});
 });
 
-document.querySelector('.uvform').addEventListener('submit', (e) => {
+document.querySelector('.sfform').addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	worker().then(e=>{
-		var val = document.querySelector('.uvinput').value;
+		var val = document.querySelector('.sfinput').value;
 		if (!val.startsWith('http')) val = 'https://' + val;
 	
 		location.assign(window.__uv$config.prefix + window.__uv$config.encodeUrl(val));
